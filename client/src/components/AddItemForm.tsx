@@ -40,7 +40,7 @@ export const AddItemForm = () => {
 
     return (
         <div>
-            <form className="gap-3 flex flex-col mx-auto w-3/4">
+            <form className="gap-3 flex flex-col mx-auto w-3/4 mt-8">
                 <input
                     type="text"
                     placeholder="Name"
