@@ -1,10 +1,11 @@
 import { useState } from "react";
-import {useLocation} from 'react-router-dom';
+import { useNavigate,useLocation} from 'react-router-dom';
 
 export const EditItem = () => {
     const location = useLocation();
     const { item } = location.state;
     
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({ name: item.name, Description: item.description });
 
     const handleChange = (e:any) => {
@@ -24,6 +25,7 @@ export const EditItem = () => {
 
             if (response.ok) {
                 console.log('User data updated successfully');
+                navigate('/');
 
             } else {
                 console.log('Update request failed');
